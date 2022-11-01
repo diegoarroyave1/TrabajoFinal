@@ -1,0 +1,20 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Editar nuevo evento {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Editar un Evento
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del Evento</h4>
+        {% include 'eventos/form.html' %}
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
+    
+{% endblock %}    

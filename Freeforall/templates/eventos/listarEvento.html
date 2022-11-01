@@ -1,0 +1,67 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Lista de eventos {% endblock %}
+
+{% block contenido %}
+
+  <div class="card">
+    <div class="card-header">
+   <div class="d-grid gap-2 d-md-block">
+         <button class="btn btn-primary" type="button" href="#">Crear</button>
+    </div>
+    </div>
+    <div class="card-body">
+        <h4 classs="card-title " >Eventos</h4>
+
+        <table class="table" >
+            <thead>
+                <tr>
+                    <th>IDevento</th>
+                    <th>nombre_evento</th>
+                    <th>fecha_inici</th>
+                    <th>fecha_fin</th>
+                    <th>ubicacion</th>
+                    <th>precio</th>
+                    <th>Municipio</th>
+                    <th>Acciones</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for eventos in eventos %}
+                    <tr>
+                        <td scope="row"></td>
+                        <td>{{ eventos.nombre_evento }}</td>
+                        <td>{{ eventos.fecha_inicio }}</td>
+                        <td>{{ eventos.feha_fin }}</td>
+                        <td>{{ eventos.ubicacion }}</td>
+                        <td>{{ eventos.precio }}</td>
+                        <td>{{ eventos.Municipio }}</td>
+                        <td><a name="" id="" class="btn btn-info" href="{% url 'editarEvento' %}" role="button">Editar</a></td>
+                        <td><a name="" id="" class="btn btn-danger" href="#" role="button">Button</a></td>
+                    </tr>
+
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+
+        
+
+
+        
+
+        
+        
+        
+
+    </div>
+
+
+
+
+
+  </div>  
+    
+{% endblock %}    

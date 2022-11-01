@@ -1,0 +1,26 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Crear nuevo evento {%endblock%}
+
+{% block contenido %}
+
+<h4>Agregar Trabajador</h4>
+    <form action="{% url 'planta:guardarEvento' %}" method="post">
+        {% csrf_token %}
+        <label>Nombre evento</label>
+        <input type="text" name="nombre_evento" /><br>
+        <label>Fecha inicio</label>
+        <input type="date" name="fecha_inicio" /><br>
+        <label>Feha fin</label>
+        <input type="date" name="feha_fin" /><br>
+        <label>Ubicacion</label>
+        <input type="text" name="ubicacion" /><br>
+        <label>Precio</label>
+        <input type="number" name="precio" /><br>
+        <label>Municipio</label>
+        <input type="text" name="Municipio" /><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+    
+{%endblock%}    
